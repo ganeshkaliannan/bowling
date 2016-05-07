@@ -1,0 +1,8 @@
+FRAME # <%=@frame_number%>
+
+<%=form_tag (score_collecter_bowling_games_path)%>
+<%= hidden_field_tag :frame_number, @frame_number%>
+<%= hidden_field_tag :id, @bowling_game.id%>
+<%= text_field_tag :try_one%>
+<%= text_field_tag :try_two%>
+<%=submit_tag "Next"%>

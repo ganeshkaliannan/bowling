@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Player name:</strong>
+  <%= @bowling_game.player_name %>
+</p>
+
+<p>
+  <strong>Player email:</strong>
+  <%= @bowling_game.player_email %>
+</p>
+
+<p>
+  <strong>Frame scores:</strong>
+  <%= @bowling_game.frame_scores %>
+</p>
+
+<p>
+  <strong>Total score:</strong>
+  <%= @bowling_game.total_score %>
+</p>
+
+<%= link_to 'Edit', edit_bowling_game_path(@bowling_game) %> |
+<%= link_to 'Back', bowling_games_path %>

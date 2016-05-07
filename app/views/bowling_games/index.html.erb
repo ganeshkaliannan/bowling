@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Bowling Games</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Player name</th>
+      <th>Player email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bowling_games.each do |bowling_game| %>
+      <tr>
+        <td><%= bowling_game.player_name %></td>
+        <td><%= bowling_game.player_email %></td>
+        <td><%= link_to 'Show', bowling_game %></td>
+        <td><%= link_to 'Edit', edit_bowling_game_path(bowling_game) %></td>
+        <td><%= link_to 'Start The Game', bowling_frame_bowling_game_path(bowling_game) %></td>
+        <td> </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bowling game', new_bowling_game_path %>
